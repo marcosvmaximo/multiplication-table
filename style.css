@@ -1,0 +1,210 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: F4E2DE;
+  color: #3e4044;
+  font-family: Helvetica, sans-serif;
+}
+
+body,
+.container {
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-container {
+  width: 250px;
+  margin: 0 auto;
+  display: grid;
+  justify-items: start;
+  align-content: start;
+  gap: .875rem;
+  background: #D94F04;
+  padding: 2rem;
+  border: 5px solid #007172;
+  border-radius: 5px;
+  box-shadow: 0px 0px 0px 5px #D94F04;
+}
+
+.input-container div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-container div + div {
+  margin-top: 35px;
+}
+
+.input-container label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #F4E2DE;
+}
+
+.input-container span {
+  color: #007172;
+}
+
+.input-container input,
+.input-container button {
+  padding: 10px;
+  border-radius: 50px;
+  border: 4px solid #F29325;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .5);
+  color: #F29325;
+  background: #F4E2DE;
+  font-size: 1.2rem;
+}
+
+.input-container input {
+  max-width: 40px;
+  text-align: center;
+}
+
+.input-container button {
+    align-items: center;
+  justify-self: center;
+    background-color: #007172;
+    border: 0;
+    border-radius: 100px;
+    box-sizing: border-box;
+    color: #F4E2DE;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 20px;
+    max-width: 480px;
+    min-height: 40px;
+    min-width: 0px;
+    overflow: hidden;
+    padding: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    touch-action: manipulation;
+    transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    margin-top: 15px;
+    transition: all .3s ease;
+}
+
+.input-container button:hover {
+  background-color: #025259;
+}
+
+
+/* tabelas */
+
+.table-container {
+  display: none;
+  grid-template-rows: repeat(auto-fit, auto);
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px 25px;
+  margin: 30px 15px;
+}
+
+@media (max-width: 900px) {
+  .table-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 400px) {
+  .table-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.table-container div {
+  background: #D94F04;
+  border: 5px solid #007172;
+  border-radius: 5px;
+  box-shadow: 0px 0px 0px 5px #D94F04;
+}
+
+/* Estilização tabela */
+
+table {
+  width: 100%;
+  border-collapse: none;
+}
+
+table th {
+  padding: 1rem;
+  background: #D94F04;
+  font-size: 2rem;
+  color: #F29325;
+  font-weight: bold;
+}
+
+table tbody tr {
+  display: flex;
+  justify-content: center;
+}
+
+table td {
+  padding: 7px 5px;
+  text-align: end;
+  color: #F4E2DE;
+  font-size: 1.2rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+}
+
+table var {
+  font-size: .875rem;
+  font-weight: bold;
+  font-style: normal;
+}
+
+table td + td {
+  text-align: start;
+}
+
+table tr:nth-of-type(odd){
+  background: #007172;
+}
+
+
+table tr:hover td{
+  font-size: 1.5rem;
+}
+
+.active {
+  display: grid;
+  animation: show .5s forwards;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translateY(400px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+[data-table="phantom"] {
+  display: none;
+}

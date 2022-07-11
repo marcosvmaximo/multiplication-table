@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabuada</title>
+  <meta name="description" content="Digite um número que você desseja saber a tabuada.">
+  <meta name="keywords" content="tabuada, tabuada do 1 ao 10, digite um numero">
+  <link rel="stylesheet" type="text/css" href="style.css"  media="screen">
+</head>
+<body>
+  <div class="container">
+    <section class="input-container" aria-label="Digite o número que deseja ver a tabuada" data-input>
+      <div>
+        <label for="number1">do numero</label>
+        <span>➜</span>
+        <input type="text" id="number1" min="1" max="100" data-input="init">
+      </div>
+      <div>
+        <label for="number2">ao numero</label>
+        <span>➜</span>
+        <input type="text" id="number2" min="1" max="100" data-input="end">
+      </div>
+      <button type="submit" data-input="button">Criar Tabuada</button>
+    </section>
+  </div>
+  <section class="table-container" data-tables>
+    <div data-table="phantom">
+      <table cellspacing="0" rules="none">
+        <thead>
+          <tr>
+            <th colspan="2">1</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <script type="module" src="./js/script.js"></script>
+</body>
+</html>
